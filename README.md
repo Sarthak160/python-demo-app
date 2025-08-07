@@ -13,4 +13,4 @@ curl -X POST \
 keploy test -c "python3 demo.py" --dedup -t test-set-0 --freezeTime
 
 ### Rerecord
- keploy rerecord -c "sudo docker run --network keploy-network -p 5000:5000 --name flask-jwt-test --rm flask-keploy-app" 
+ keploy rerecord -c "sudo docker run --network keploy-network -p 5000:5000 --name flask-jwt-test --rm flask-keploy-app" # python-demo-app
