@@ -1,0 +1,7 @@
+[run]
+omit =
+    /usr/*
+sigterm = true
+concurrency  = multiprocessing, thread
+parallel = true
+data_file = .coverage.keploy

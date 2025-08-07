@@ -1,0 +1,7 @@
+preScript: ""
+postScript: ""
+template: {}
+mockRegistry:
+    mock: d450a531983a43e4dcdfea5e9cf03dfccceb98ecf50910af42789ab91d0d6f5f
+    app: python-mysql-big-payload-3
+metadata: {}
