@@ -21,7 +21,7 @@ spec:
             filler: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
         - header:
             header:
-                payload_length: 296
+                payload_length: 298
                 sequence_id: 2
             packet_type: HandshakeResponse41
           message:
@@ -30,7 +30,7 @@ spec:
             character_set: 255
             filler: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
             username: demo
-            auth_response: [195, 16, 200, 67, 23, 88, 22, 236, 172, 15, 169, 118, 183, 24, 109, 196, 131, 176, 2, 32, 77, 3, 21, 253, 231, 18, 191, 102, 251, 183, 212, 76]
+            auth_response: [219, 164, 184, 128, 33, 242, 197, 83, 48, 197, 223, 51, 66, 119, 243, 52, 228, 7, 220, 217, 90, 53, 80, 190, 75, 114, 118, 61, 62, 243, 40, 25]
             database: demo
             auth_plugin_name: caching_sha2_password
             connection_attributes:
@@ -40,9 +40,9 @@ spec:
                 _connector_name: mysql-connector-python
                 _connector_version: 9.1.0
                 _os: Linux
-                _pid: "122233"
-                _platform: x86_64
-                _source_host: ubuntu2404
+                _pid: "57576"
+                _platform: aarch64
+                _source_host: lima-default
             zstdcompressionlevel: 0
     responses:
         - header:
@@ -53,8 +53,8 @@ spec:
           message:
             protocol_version: 10
             server_version: 8.3.0
-            connection_id: 51
-            auth_plugin_data: [69, 113, 22, 81, 13, 63, 90, 74, 53, 121, 126, 73, 109, 105, 19, 112, 51, 91, 5, 45, 0]
+            connection_id: 131
+            auth_plugin_data: [65, 100, 90, 21, 48, 41, 92, 90, 98, 46, 60, 17, 93, 17, 1, 78, 122, 7, 32, 20, 0]
             filler: 0
             capability_flags: 3758096383
             character_set: 255
@@ -80,9 +80,9 @@ spec:
             status_flags: 16386
             warnings: 0
             info: "\0\a\x01\x05\x04demo"
-    created: 1754595859
-    reqtimestampmock: 2025-08-07T19:44:19.669105065Z
-    restimestampmock: 2025-08-07T19:44:19.687171141Z
+    created: 1754653570
+    reqtimestampmock: 2025-08-08T17:16:10.673814206+05:30
+    restimestampmock: 2025-08-08T17:16:10.686673512+05:30
 ---
 version: api.keploy.io/v1beta1
 kind: MySQL
@@ -119,9 +119,9 @@ spec:
             status_flags: 16386
             warnings: 0
             info: "\0b\0\x1D\x14character_set_client\autf8mb4\0!\x18character_set_connection\autf8mb4\0\x1E\x15character_set_results\autf8mb4"
-    created: 1754595859
-    reqtimestampmock: 2025-08-07T19:44:19.687237362Z
-    restimestampmock: 2025-08-07T19:44:19.690538916Z
+    created: 1754653570
+    reqtimestampmock: 2025-08-08T17:16:10.686858346+05:30
+    restimestampmock: 2025-08-08T17:16:10.687021387+05:30
 ---
 version: api.keploy.io/v1beta1
 kind: MySQL
@@ -158,9 +158,9 @@ spec:
             status_flags: 16384
             warnings: 0
             info: "\0\x11\0\x0F\nautocommit\x03OFF"
-    created: 1754595859
-    reqtimestampmock: 2025-08-07T19:44:19.691122438Z
-    restimestampmock: 2025-08-07T19:44:19.693120394Z
+    created: 1754653570
+    reqtimestampmock: 2025-08-08T17:16:10.687094596+05:30
+    restimestampmock: 2025-08-08T17:16:10.687214263+05:30
 ---
 version: api.keploy.io/v1beta1
 kind: MySQL
@@ -192,9 +192,9 @@ spec:
             status_flags: 0
             warnings: 0
             info: ""
-    created: 1754595859
-    reqtimestampmock: 2025-08-07T19:44:19.693741008Z
-    restimestampmock: 2025-08-07T19:44:19.69381476Z
+    created: 1754653570
+    reqtimestampmock: 2025-08-08T17:16:10.687276721+05:30
+    restimestampmock: 2025-08-08T17:16:10.687341721+05:30
 ---
 version: api.keploy.io/v1beta1
 kind: MySQL
@@ -236,9 +236,9 @@ spec:
             status_flags: 0
             warnings: 1
             info: ""
-    created: 1754595859
-    reqtimestampmock: 2025-08-07T19:44:19.693996124Z
-    restimestampmock: 2025-08-07T19:44:19.701257057Z
+    created: 1754653570
+    reqtimestampmock: 2025-08-08T17:16:10.687433971+05:30
+    restimestampmock: 2025-08-08T17:16:10.689244598+05:30
 ---
 version: api.keploy.io/v1beta1
 kind: MySQL
@@ -282,9 +282,9 @@ spec:
             status_flags: 0
             warnings: 1
             info: ""
-    created: 1754595859
-    reqtimestampmock: 2025-08-07T19:44:19.701299807Z
-    restimestampmock: 2025-08-07T19:44:19.705062092Z
+    created: 1754653570
+    reqtimestampmock: 2025-08-08T17:16:10.689338682+05:30
+    restimestampmock: 2025-08-08T17:16:10.690059849+05:30
 ---
 version: api.keploy.io/v1beta1
 kind: MySQL
@@ -327,9 +327,9 @@ spec:
             status_flags: 0
             warnings: 1
             info: ""
-    created: 1754595859
-    reqtimestampmock: 2025-08-07T19:44:19.705143594Z
-    restimestampmock: 2025-08-07T19:44:19.710208287Z
+    created: 1754653570
+    reqtimestampmock: 2025-08-08T17:16:10.690141266+05:30
+    restimestampmock: 2025-08-08T17:16:10.690831392+05:30
 ---
 version: api.keploy.io/v1beta1
 kind: MySQL
@@ -370,9 +370,9 @@ spec:
             status_flags: 0
             warnings: 1
             info: ""
-    created: 1754595859
-    reqtimestampmock: 2025-08-07T19:44:19.710389911Z
-    restimestampmock: 2025-08-07T19:44:19.715153518Z
+    created: 1754653570
+    reqtimestampmock: 2025-08-08T17:16:10.690902558+05:30
+    restimestampmock: 2025-08-08T17:16:10.691964643+05:30
 ---
 version: api.keploy.io/v1beta1
 kind: MySQL
@@ -381,129 +381,12 @@ spec:
     metadata:
         connID: "0"
         requestOperation: COM_QUERY
-        responseOperation: OK
+        responseOperation: ERR
         type: mocks
     requests:
-        - header:
-            header:
-                payload_length: 27
-                sequence_id: 0
-            packet_type: COM_QUERY
-          message:
-            command: 3
-            parameter_count: 0
-            null_bitmap: []
-            new_params_bind_flag: 0
-            parameters: []
-            query: TRUNCATE TABLE accounts;
-    responses:
-        - header:
-            header:
-                payload_length: 7
-                sequence_id: 1
-            packet_type: OK
-          message:
-            header: 0
-            affected_rows: 0
-            last_insert_id: 0
-            status_flags: 0
-            warnings: 0
-            info: ""
-    created: 1754595859
-    reqtimestampmock: 2025-08-07T19:44:19.715563978Z
-    restimestampmock: 2025-08-07T19:44:19.806343855Z
----
-version: api.keploy.io/v1beta1
-kind: MySQL
-name: mock-9
-spec:
-    metadata:
-        connID: "0"
-        requestOperation: COM_QUERY
-        responseOperation: OK
-        type: mocks
-    requests:
-        - header:
-            header:
-                payload_length: 23
-                sequence_id: 0
-            packet_type: COM_QUERY
-          message:
-            command: 3
-            parameter_count: 0
-            null_bitmap: []
-            new_params_bind_flag: 0
-            parameters: []
-            query: DELETE FROM clients;
-    responses:
-        - header:
-            header:
-                payload_length: 7
-                sequence_id: 1
-            packet_type: OK
-          message:
-            header: 0
-            affected_rows: 2
-            last_insert_id: 0
-            status_flags: 33
-            warnings: 0
-            info: ""
-    created: 1754595859
-    reqtimestampmock: 2025-08-07T19:44:19.806866387Z
-    restimestampmock: 2025-08-07T19:44:19.808431811Z
----
-version: api.keploy.io/v1beta1
-kind: MySQL
-name: mock-10
-spec:
-    metadata:
-        connID: "0"
-        requestOperation: COM_QUERY
-        responseOperation: OK
-        type: mocks
-    requests:
-        - header:
-            header:
-                payload_length: 42
-                sequence_id: 0
-            packet_type: COM_QUERY
-          message:
-            command: 3
-            parameter_count: 0
-            null_bitmap: []
-            new_params_bind_flag: 0
-            parameters: []
-            query: ALTER TABLE clients AUTO_INCREMENT = 1;
-    responses:
         - header:
             header:
                 payload_length: 46
-                sequence_id: 1
-            packet_type: OK
-          message:
-            header: 0
-            affected_rows: 0
-            last_insert_id: 0
-            status_flags: 0
-            warnings: 0
-            info: '&Records: 0  Duplicates: 0  Warnings: 0'
-    created: 1754595859
-    reqtimestampmock: 2025-08-07T19:44:19.808851481Z
-    restimestampmock: 2025-08-07T19:44:19.841917982Z
----
-version: api.keploy.io/v1beta1
-kind: MySQL
-name: mock-11
-spec:
-    metadata:
-        connID: "0"
-        requestOperation: COM_QUERY
-        responseOperation: OK
-        type: mocks
-    requests:
-        - header:
-            header:
-                payload_length: 30
                 sequence_id: 0
             packet_type: COM_QUERY
           message:
@@ -512,863 +395,19 @@ spec:
             null_bitmap: []
             new_params_bind_flag: 0
             parameters: []
-            query: TRUNCATE TABLE permissions;
+            query: "\n    TRUNCATE \n        TABLE accounts;\n    "
     responses:
         - header:
             header:
-                payload_length: 7
+                payload_length: 129
                 sequence_id: 1
-            packet_type: OK
+            packet_type: ERR
           message:
-            header: 0
-            affected_rows: 0
-            last_insert_id: 0
-            status_flags: 0
-            warnings: 0
-            info: ""
-    created: 1754595859
-    reqtimestampmock: 2025-08-07T19:44:19.842440724Z
-    restimestampmock: 2025-08-07T19:44:19.935242467Z
----
-version: api.keploy.io/v1beta1
-kind: MySQL
-name: mock-12
-spec:
-    metadata:
-        connID: "0"
-        requestOperation: COM_QUERY
-        responseOperation: OK
-        type: mocks
-    requests:
-        - header:
-            header:
-                payload_length: 126
-                sequence_id: 0
-            packet_type: COM_QUERY
-          message:
-            command: 3
-            parameter_count: 0
-            null_bitmap: []
-            new_params_bind_flag: 0
-            parameters: []
-            query: INSERT INTO clients (display_name, client_status) VALUES ('Global Corp Inc.', 'Active'), ('Tech Innovators LLC', 'Active');
-    responses:
-        - header:
-            header:
-                payload_length: 46
-                sequence_id: 1
-            packet_type: OK
-          message:
-            header: 0
-            affected_rows: 2
-            last_insert_id: 1
-            status_flags: 1
-            warnings: 0
-            info: '&Records: 2  Duplicates: 0  Warnings: 0'
-    created: 1754595859
-    reqtimestampmock: 2025-08-07T19:44:19.935425801Z
-    restimestampmock: 2025-08-07T19:44:19.936520795Z
----
-version: api.keploy.io/v1beta1
-kind: MySQL
-name: mock-13
-spec:
-    metadata:
-        connID: "0"
-        requestOperation: COM_QUERY
-        responseOperation: OK
-        type: mocks
-    requests:
-        - header:
-            header:
-                payload_length: 125
-                sequence_id: 0
-            packet_type: COM_QUERY
-          message:
-            command: 3
-            parameter_count: 0
-            null_bitmap: []
-            new_params_bind_flag: 0
-            parameters: []
-            query: INSERT INTO accounts (client_id, account_no_dataphile, market_value) VALUES (1, 'F12345', 150000.75), (1, NULL, 25000.50);
-    responses:
-        - header:
-            header:
-                payload_length: 46
-                sequence_id: 1
-            packet_type: OK
-          message:
-            header: 0
-            affected_rows: 2
-            last_insert_id: 1
-            status_flags: 1
-            warnings: 0
-            info: '&Records: 2  Duplicates: 0  Warnings: 0'
-    created: 1754595859
-    reqtimestampmock: 2025-08-07T19:44:19.936668949Z
-    restimestampmock: 2025-08-07T19:44:19.937927947Z
----
-version: api.keploy.io/v1beta1
-kind: MySQL
-name: mock-14
-spec:
-    metadata:
-        connID: "0"
-        requestOperation: COM_QUERY
-        responseOperation: OK
-        type: mocks
-    requests:
-        - header:
-            header:
-                payload_length: 105
-                sequence_id: 0
-            packet_type: COM_QUERY
-          message:
-            command: 3
-            parameter_count: 0
-            null_bitmap: []
-            new_params_bind_flag: 0
-            parameters: []
-            query: INSERT INTO permissions (role_name, resource_name, can_read) VALUES ('admin', 'ClientsViewSet', true);
-    responses:
-        - header:
-            header:
-                payload_length: 7
-                sequence_id: 1
-            packet_type: OK
-          message:
-            header: 0
-            affected_rows: 1
-            last_insert_id: 1
-            status_flags: 1
-            warnings: 0
-            info: ""
-    created: 1754595859
-    reqtimestampmock: 2025-08-07T19:44:19.938542071Z
-    restimestampmock: 2025-08-07T19:44:19.940249359Z
----
-version: api.keploy.io/v1beta1
-kind: MySQL
-name: mock-15
-spec:
-    metadata:
-        connID: "0"
-        requestOperation: COM_QUERY
-        responseOperation: OK
-        type: mocks
-    requests:
-        - header:
-            header:
-                payload_length: 9
-                sequence_id: 0
-            packet_type: COM_QUERY
-          message:
-            command: 3
-            parameter_count: 0
-            null_bitmap: []
-            new_params_bind_flag: 0
-            parameters: []
-            query: commit
-    responses:
-        - header:
-            header:
-                payload_length: 7
-                sequence_id: 1
-            packet_type: OK
-          message:
-            header: 0
-            affected_rows: 0
-            last_insert_id: 0
-            status_flags: 0
-            warnings: 0
-            info: ""
-    created: 1754595859
-    reqtimestampmock: 2025-08-07T19:44:19.940457803Z
-    restimestampmock: 2025-08-07T19:44:19.949412364Z
----
-version: api.keploy.io/v1beta1
-kind: MySQL
-name: mock-16
-spec:
-    metadata:
-        connID: "2"
-        requestOperation: HandshakeV10
-        responseOperation: OK
-        type: config
-    requests:
-        - header:
-            header:
-                payload_length: 32
-                sequence_id: 1
-            packet_type: SSLRequest
-          message:
-            capability_flags: 431991437
-            max_packet_size: 1073741824
-            character_set: 255
-            filler: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
-        - header:
-            header:
-                payload_length: 296
-                sequence_id: 2
-            packet_type: HandshakeResponse41
-          message:
-            capability_flags: 431991437
-            max_packet_size: 1073741824
-            character_set: 255
-            filler: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
-            username: demo
-            auth_response: [177, 5, 24, 192, 68, 76, 51, 21, 237, 2, 202, 222, 178, 128, 5, 81, 153, 194, 31, 51, 157, 16, 136, 91, 141, 169, 69, 12, 141, 152, 248, 90]
-            database: demo
-            auth_plugin_name: caching_sha2_password
-            connection_attributes:
-                _client_name: libmysql
-                _client_version: 9.1.0
-                _connector_license: GPL-2.0
-                _connector_name: mysql-connector-python
-                _connector_version: 9.1.0
-                _os: Linux
-                _pid: "122259"
-                _platform: x86_64
-                _source_host: ubuntu2404
-            zstdcompressionlevel: 0
-    responses:
-        - header:
-            header:
-                payload_length: 73
-                sequence_id: 0
-            packet_type: HandshakeV10
-          message:
-            protocol_version: 10
-            server_version: 8.3.0
-            connection_id: 52
-            auth_plugin_data: [116, 121, 46, 92, 109, 14, 7, 124, 77, 87, 80, 18, 1, 55, 6, 82, 37, 102, 76, 88, 0]
-            filler: 0
-            capability_flags: 3758096383
-            character_set: 255
-            status_flags: 2
-            auth_plugin_name: caching_sha2_password
-        - header:
-            header:
-                payload_length: 2
-                sequence_id: 3
-            packet_type: AuthMoreData
-          message:
-            status_tag: 1
-            data: FastAuthSuccess
-        - header:
-            header:
-                payload_length: 16
-                sequence_id: 4
-            packet_type: OK
-          message:
-            header: 0
-            affected_rows: 0
-            last_insert_id: 0
-            status_flags: 16386
-            warnings: 0
-            info: "\0\a\x01\x05\x04demo"
-    created: 1754595860
-    reqtimestampmock: 2025-08-07T19:44:20.097076696Z
-    restimestampmock: 2025-08-07T19:44:20.117320689Z
----
-version: api.keploy.io/v1beta1
-kind: MySQL
-name: mock-17
-spec:
-    metadata:
-        connID: "2"
-        requestOperation: COM_QUERY
-        responseOperation: OK
-        type: mocks
-    requests:
-        - header:
-            header:
-                payload_length: 51
-                sequence_id: 0
-            packet_type: COM_QUERY
-          message:
-            command: 3
-            parameter_count: 0
-            null_bitmap: []
-            new_params_bind_flag: 0
-            parameters: []
-            query: SET NAMES 'utf8mb4' COLLATE 'utf8mb4_0900_ai_ci'
-    responses:
-        - header:
-            header:
-                payload_length: 107
-                sequence_id: 1
-            packet_type: OK
-          message:
-            header: 0
-            affected_rows: 0
-            last_insert_id: 0
-            status_flags: 16386
-            warnings: 0
-            info: "\0b\0\x1D\x14character_set_client\autf8mb4\0!\x18character_set_connection\autf8mb4\0\x1E\x15character_set_results\autf8mb4"
-    created: 1754595860
-    reqtimestampmock: 2025-08-07T19:44:20.117509583Z
-    restimestampmock: 2025-08-07T19:44:20.119811184Z
----
-version: api.keploy.io/v1beta1
-kind: MySQL
-name: mock-18
-spec:
-    metadata:
-        connID: "2"
-        requestOperation: COM_QUERY
-        responseOperation: OK
-        type: mocks
-    requests:
-        - header:
-            header:
-                payload_length: 19
-                sequence_id: 0
-            packet_type: COM_QUERY
-          message:
-            command: 3
-            parameter_count: 0
-            null_bitmap: []
-            new_params_bind_flag: 0
-            parameters: []
-            query: set autocommit=0
-    responses:
-        - header:
-            header:
-                payload_length: 26
-                sequence_id: 1
-            packet_type: OK
-          message:
-            header: 0
-            affected_rows: 0
-            last_insert_id: 0
-            status_flags: 16384
-            warnings: 0
-            info: "\0\x11\0\x0F\nautocommit\x03OFF"
-    created: 1754595860
-    reqtimestampmock: 2025-08-07T19:44:20.120230103Z
-    restimestampmock: 2025-08-07T19:44:20.123504368Z
----
-version: api.keploy.io/v1beta1
-kind: MySQL
-name: mock-19
-spec:
-    metadata:
-        connID: "2"
-        requestOperation: COM_PING
-        responseOperation: OK
-        type: mocks
-    requests:
-        - header:
-            header:
-                payload_length: 1
-                sequence_id: 0
-            packet_type: COM_PING
-          message:
-            command: 14
-    responses:
-        - header:
-            header:
-                payload_length: 7
-                sequence_id: 1
-            packet_type: OK
-          message:
-            header: 0
-            affected_rows: 0
-            last_insert_id: 0
-            status_flags: 0
-            warnings: 0
-            info: ""
-    created: 1754595860
-    reqtimestampmock: 2025-08-07T19:44:20.123782814Z
-    restimestampmock: 2025-08-07T19:44:20.124078451Z
----
-version: api.keploy.io/v1beta1
-kind: MySQL
-name: mock-20
-spec:
-    metadata:
-        connID: "2"
-        requestOperation: COM_QUERY
-        responseOperation: OK
-        type: mocks
-    requests:
-        - header:
-            header:
-                payload_length: 175
-                sequence_id: 0
-            packet_type: COM_QUERY
-          message:
-            command: 3
-            parameter_count: 0
-            null_bitmap: []
-            new_params_bind_flag: 0
-            parameters: []
-            query: |4-
-                    CREATE TABLE IF NOT EXISTS clients (
-                        id BIGINT PRIMARY KEY AUTO_INCREMENT,
-                        display_name VARCHAR(255) NOT NULL,
-                        client_status VARCHAR(50)
-                    );
-    responses:
-        - header:
-            header:
-                payload_length: 7
-                sequence_id: 1
-            packet_type: OK
-          message:
-            header: 0
-            affected_rows: 0
-            last_insert_id: 0
-            status_flags: 0
-            warnings: 1
-            info: ""
-    created: 1754595860
-    reqtimestampmock: 2025-08-07T19:44:20.124300096Z
-    restimestampmock: 2025-08-07T19:44:20.134425022Z
----
-version: api.keploy.io/v1beta1
-kind: MySQL
-name: mock-21
-spec:
-    metadata:
-        connID: "2"
-        requestOperation: COM_QUERY
-        responseOperation: OK
-        type: mocks
-    requests:
-        - header:
-            header:
-                payload_length: 282
-                sequence_id: 0
-            packet_type: COM_QUERY
-          message:
-            command: 3
-            parameter_count: 0
-            null_bitmap: []
-            new_params_bind_flag: 0
-            parameters: []
-            query: |4-
-                    CREATE TABLE IF NOT EXISTS accounts (
-                        id BIGINT PRIMARY KEY AUTO_INCREMENT,
-                        client_id BIGINT,
-                        account_no_dataphile VARCHAR(100) NULL,
-                        market_value DECIMAL(20, 2),
-                        FOREIGN KEY (client_id) REFERENCES clients(id) ON DELETE CASCADE
-                    );
-    responses:
-        - header:
-            header:
-                payload_length: 7
-                sequence_id: 1
-            packet_type: OK
-          message:
-            header: 0
-            affected_rows: 0
-            last_insert_id: 0
-            status_flags: 0
-            warnings: 1
-            info: ""
-    created: 1754595860
-    reqtimestampmock: 2025-08-07T19:44:20.135811653Z
-    restimestampmock: 2025-08-07T19:44:20.141374108Z
----
-version: api.keploy.io/v1beta1
-kind: MySQL
-name: mock-22
-spec:
-    metadata:
-        connID: "2"
-        requestOperation: COM_QUERY
-        responseOperation: OK
-        type: mocks
-    requests:
-        - header:
-            header:
-                payload_length: 194
-                sequence_id: 0
-            packet_type: COM_QUERY
-          message:
-            command: 3
-            parameter_count: 0
-            null_bitmap: []
-            new_params_bind_flag: 0
-            parameters: []
-            query: |4-
-                    CREATE TABLE IF NOT EXISTS permissions (
-                        id BIGINT PRIMARY KEY AUTO_INCREMENT,
-                        role_name VARCHAR(100),
-                        resource_name VARCHAR(100),
-                        can_read BOOLEAN
-                    );
-    responses:
-        - header:
-            header:
-                payload_length: 7
-                sequence_id: 1
-            packet_type: OK
-          message:
-            header: 0
-            affected_rows: 0
-            last_insert_id: 0
-            status_flags: 0
-            warnings: 1
-            info: ""
-    created: 1754595860
-    reqtimestampmock: 2025-08-07T19:44:20.142709588Z
-    restimestampmock: 2025-08-07T19:44:20.147234989Z
----
-version: api.keploy.io/v1beta1
-kind: MySQL
-name: mock-23
-spec:
-    metadata:
-        connID: "2"
-        requestOperation: COM_QUERY
-        responseOperation: OK
-        type: mocks
-    requests:
-        - header:
-            header:
-                payload_length: 120
-                sequence_id: 0
-            packet_type: COM_QUERY
-          message:
-            command: 3
-            parameter_count: 0
-            null_bitmap: []
-            new_params_bind_flag: 0
-            parameters: []
-            query: |4-
-                    CREATE TABLE IF NOT EXISTS payloads (
-                        id BIGINT PRIMARY KEY AUTO_INCREMENT,
-                        data LONGTEXT
-                    );
-    responses:
-        - header:
-            header:
-                payload_length: 7
-                sequence_id: 1
-            packet_type: OK
-          message:
-            header: 0
-            affected_rows: 0
-            last_insert_id: 0
-            status_flags: 0
-            warnings: 1
-            info: ""
-    created: 1754595860
-    reqtimestampmock: 2025-08-07T19:44:20.147478234Z
-    restimestampmock: 2025-08-07T19:44:20.151977836Z
----
-version: api.keploy.io/v1beta1
-kind: MySQL
-name: mock-24
-spec:
-    metadata:
-        connID: "2"
-        requestOperation: COM_QUERY
-        responseOperation: OK
-        type: mocks
-    requests:
-        - header:
-            header:
-                payload_length: 27
-                sequence_id: 0
-            packet_type: COM_QUERY
-          message:
-            command: 3
-            parameter_count: 0
-            null_bitmap: []
-            new_params_bind_flag: 0
-            parameters: []
-            query: TRUNCATE TABLE accounts;
-    responses:
-        - header:
-            header:
-                payload_length: 7
-                sequence_id: 1
-            packet_type: OK
-          message:
-            header: 0
-            affected_rows: 0
-            last_insert_id: 0
-            status_flags: 0
-            warnings: 0
-            info: ""
-    created: 1754595860
-    reqtimestampmock: 2025-08-07T19:44:20.152350054Z
-    restimestampmock: 2025-08-07T19:44:20.250256398Z
----
-version: api.keploy.io/v1beta1
-kind: MySQL
-name: mock-25
-spec:
-    metadata:
-        connID: "2"
-        requestOperation: COM_QUERY
-        responseOperation: OK
-        type: mocks
-    requests:
-        - header:
-            header:
-                payload_length: 23
-                sequence_id: 0
-            packet_type: COM_QUERY
-          message:
-            command: 3
-            parameter_count: 0
-            null_bitmap: []
-            new_params_bind_flag: 0
-            parameters: []
-            query: DELETE FROM clients;
-    responses:
-        - header:
-            header:
-                payload_length: 7
-                sequence_id: 1
-            packet_type: OK
-          message:
-            header: 0
-            affected_rows: 2
-            last_insert_id: 0
-            status_flags: 33
-            warnings: 0
-            info: ""
-    created: 1754595860
-    reqtimestampmock: 2025-08-07T19:44:20.250943633Z
-    restimestampmock: 2025-08-07T19:44:20.252016797Z
----
-version: api.keploy.io/v1beta1
-kind: MySQL
-name: mock-26
-spec:
-    metadata:
-        connID: "2"
-        requestOperation: COM_QUERY
-        responseOperation: OK
-        type: mocks
-    requests:
-        - header:
-            header:
-                payload_length: 42
-                sequence_id: 0
-            packet_type: COM_QUERY
-          message:
-            command: 3
-            parameter_count: 0
-            null_bitmap: []
-            new_params_bind_flag: 0
-            parameters: []
-            query: ALTER TABLE clients AUTO_INCREMENT = 1;
-    responses:
-        - header:
-            header:
-                payload_length: 46
-                sequence_id: 1
-            packet_type: OK
-          message:
-            header: 0
-            affected_rows: 0
-            last_insert_id: 0
-            status_flags: 0
-            warnings: 0
-            info: '&Records: 0  Duplicates: 0  Warnings: 0'
-    created: 1754595860
-    reqtimestampmock: 2025-08-07T19:44:20.252421816Z
-    restimestampmock: 2025-08-07T19:44:20.281867876Z
----
-version: api.keploy.io/v1beta1
-kind: MySQL
-name: mock-27
-spec:
-    metadata:
-        connID: "2"
-        requestOperation: COM_QUERY
-        responseOperation: OK
-        type: mocks
-    requests:
-        - header:
-            header:
-                payload_length: 30
-                sequence_id: 0
-            packet_type: COM_QUERY
-          message:
-            command: 3
-            parameter_count: 0
-            null_bitmap: []
-            new_params_bind_flag: 0
-            parameters: []
-            query: TRUNCATE TABLE permissions;
-    responses:
-        - header:
-            header:
-                payload_length: 7
-                sequence_id: 1
-            packet_type: OK
-          message:
-            header: 0
-            affected_rows: 0
-            last_insert_id: 0
-            status_flags: 0
-            warnings: 0
-            info: ""
-    created: 1754595860
-    reqtimestampmock: 2025-08-07T19:44:20.282652284Z
-    restimestampmock: 2025-08-07T19:44:20.406442128Z
----
-version: api.keploy.io/v1beta1
-kind: MySQL
-name: mock-28
-spec:
-    metadata:
-        connID: "2"
-        requestOperation: COM_QUERY
-        responseOperation: OK
-        type: mocks
-    requests:
-        - header:
-            header:
-                payload_length: 126
-                sequence_id: 0
-            packet_type: COM_QUERY
-          message:
-            command: 3
-            parameter_count: 0
-            null_bitmap: []
-            new_params_bind_flag: 0
-            parameters: []
-            query: INSERT INTO clients (display_name, client_status) VALUES ('Global Corp Inc.', 'Active'), ('Tech Innovators LLC', 'Active');
-    responses:
-        - header:
-            header:
-                payload_length: 46
-                sequence_id: 1
-            packet_type: OK
-          message:
-            header: 0
-            affected_rows: 2
-            last_insert_id: 1
-            status_flags: 1
-            warnings: 0
-            info: '&Records: 2  Duplicates: 0  Warnings: 0'
-    created: 1754595860
-    reqtimestampmock: 2025-08-07T19:44:20.407059302Z
-    restimestampmock: 2025-08-07T19:44:20.407816479Z
----
-version: api.keploy.io/v1beta1
-kind: MySQL
-name: mock-29
-spec:
-    metadata:
-        connID: "2"
-        requestOperation: COM_QUERY
-        responseOperation: OK
-        type: mocks
-    requests:
-        - header:
-            header:
-                payload_length: 125
-                sequence_id: 0
-            packet_type: COM_QUERY
-          message:
-            command: 3
-            parameter_count: 0
-            null_bitmap: []
-            new_params_bind_flag: 0
-            parameters: []
-            query: INSERT INTO accounts (client_id, account_no_dataphile, market_value) VALUES (1, 'F12345', 150000.75), (1, NULL, 25000.50);
-    responses:
-        - header:
-            header:
-                payload_length: 46
-                sequence_id: 1
-            packet_type: OK
-          message:
-            header: 0
-            affected_rows: 2
-            last_insert_id: 1
-            status_flags: 1
-            warnings: 0
-            info: '&Records: 2  Duplicates: 0  Warnings: 0'
-    created: 1754595860
-    reqtimestampmock: 2025-08-07T19:44:20.408493594Z
-    restimestampmock: 2025-08-07T19:44:20.409964407Z
----
-version: api.keploy.io/v1beta1
-kind: MySQL
-name: mock-30
-spec:
-    metadata:
-        connID: "2"
-        requestOperation: COM_QUERY
-        responseOperation: OK
-        type: mocks
-    requests:
-        - header:
-            header:
-                payload_length: 105
-                sequence_id: 0
-            packet_type: COM_QUERY
-          message:
-            command: 3
-            parameter_count: 0
-            null_bitmap: []
-            new_params_bind_flag: 0
-            parameters: []
-            query: INSERT INTO permissions (role_name, resource_name, can_read) VALUES ('admin', 'ClientsViewSet', true);
-    responses:
-        - header:
-            header:
-                payload_length: 7
-                sequence_id: 1
-            packet_type: OK
-          message:
-            header: 0
-            affected_rows: 1
-            last_insert_id: 1
-            status_flags: 1
-            warnings: 0
-            info: ""
-    created: 1754595860
-    reqtimestampmock: 2025-08-07T19:44:20.411242216Z
-    restimestampmock: 2025-08-07T19:44:20.412557974Z
----
-version: api.keploy.io/v1beta1
-kind: MySQL
-name: mock-31
-spec:
-    metadata:
-        connID: "2"
-        requestOperation: COM_QUERY
-        responseOperation: OK
-        type: mocks
-    requests:
-        - header:
-            header:
-                payload_length: 9
-                sequence_id: 0
-            packet_type: COM_QUERY
-          message:
-            command: 3
-            parameter_count: 0
-            null_bitmap: []
-            new_params_bind_flag: 0
-            parameters: []
-            query: commit
-    responses:
-        - header:
-            header:
-                payload_length: 7
-                sequence_id: 1
-            packet_type: OK
-          message:
-            header: 0
-            affected_rows: 0
-            last_insert_id: 0
-            status_flags: 0
-            warnings: 0
-            info: ""
-    created: 1754595860
-    reqtimestampmock: 2025-08-07T19:44:20.412989825Z
-    restimestampmock: 2025-08-07T19:44:20.423851788Z
+            header: 255
+            error_code: 1701
+            sql_state_marker: '#'
+            sql_state: "42000"
+            error_message: Cannot truncate a table referenced in a foreign key constraint (`demo`.`transactions`, CONSTRAINT `transactions_ibfk_1`)
+    created: 1754653570
+    reqtimestampmock: 2025-08-08T17:16:10.692023143+05:30
+    restimestampmock: 2025-08-08T17:16:10.692270977+05:30

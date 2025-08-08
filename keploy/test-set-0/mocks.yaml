@@ -21,7 +21,7 @@ spec:
             filler: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
         - header:
             header:
-                payload_length: 297
+                payload_length: 298
                 sequence_id: 2
             packet_type: HandshakeResponse41
           message:
@@ -30,7 +30,7 @@ spec:
             character_set: 255
             filler: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
             username: demo
-            auth_response: [43, 233, 216, 106, 104, 227, 138, 158, 71, 101, 105, 105, 1, 73, 121, 73, 33, 88, 33, 51, 166, 242, 190, 171, 177, 190, 103, 154, 62, 73, 174, 37]
+            auth_response: [22, 185, 186, 109, 6, 161, 220, 226, 235, 153, 106, 120, 1, 153, 193, 35, 19, 4, 253, 14, 162, 54, 200, 143, 85, 91, 148, 9, 221, 182, 214, 179]
             database: demo
             auth_plugin_name: caching_sha2_password
             connection_attributes:
@@ -40,9 +40,9 @@ spec:
                 _connector_name: mysql-connector-python
                 _connector_version: 9.1.0
                 _os: Linux
-                _pid: "3927914"
-                _platform: x86_64
-                _source_host: ubuntu2404
+                _pid: "54367"
+                _platform: aarch64
+                _source_host: lima-default
             zstdcompressionlevel: 0
     responses:
         - header:
@@ -53,8 +53,8 @@ spec:
           message:
             protocol_version: 10
             server_version: 8.3.0
-            connection_id: 18
-            auth_plugin_data: [38, 127, 106, 69, 55, 97, 72, 69, 31, 81, 79, 15, 127, 1, 98, 52, 67, 75, 124, 55, 0]
+            connection_id: 126
+            auth_plugin_data: [4, 74, 86, 69, 68, 22, 16, 78, 52, 124, 15, 13, 12, 21, 73, 22, 75, 79, 50, 6, 0]
             filler: 0
             capability_flags: 3758096383
             character_set: 255
@@ -80,9 +80,9 @@ spec:
             status_flags: 16386
             warnings: 0
             info: "\0\a\x01\x05\x04demo"
-    created: 1754578755
-    reqtimestampmock: 2025-08-07T14:59:15.400926055Z
-    restimestampmock: 2025-08-07T14:59:15.417950822Z
+    created: 1754653419
+    reqtimestampmock: 2025-08-08T17:13:39.005262717+05:30
+    restimestampmock: 2025-08-08T17:13:39.019932146+05:30
 ---
 version: api.keploy.io/v1beta1
 kind: MySQL
@@ -119,9 +119,9 @@ spec:
             status_flags: 16386
             warnings: 0
             info: "\0b\0\x1D\x14character_set_client\autf8mb4\0!\x18character_set_connection\autf8mb4\0\x1E\x15character_set_results\autf8mb4"
-    created: 1754578755
-    reqtimestampmock: 2025-08-07T14:59:15.418234244Z
-    restimestampmock: 2025-08-07T14:59:15.419013891Z
+    created: 1754653419
+    reqtimestampmock: 2025-08-08T17:13:39.020141188+05:30
+    restimestampmock: 2025-08-08T17:13:39.020612813+05:30
 ---
 version: api.keploy.io/v1beta1
 kind: MySQL
@@ -158,9 +158,9 @@ spec:
             status_flags: 16384
             warnings: 0
             info: "\0\x11\0\x0F\nautocommit\x03OFF"
-    created: 1754578755
-    reqtimestampmock: 2025-08-07T14:59:15.419110711Z
-    restimestampmock: 2025-08-07T14:59:15.419769205Z
+    created: 1754653419
+    reqtimestampmock: 2025-08-08T17:13:39.02083948+05:30
+    restimestampmock: 2025-08-08T17:13:39.020856397+05:30
 ---
 version: api.keploy.io/v1beta1
 kind: MySQL
@@ -192,9 +192,9 @@ spec:
             status_flags: 0
             warnings: 0
             info: ""
-    created: 1754578755
-    reqtimestampmock: 2025-08-07T14:59:15.419861026Z
-    restimestampmock: 2025-08-07T14:59:15.420126498Z
+    created: 1754653419
+    reqtimestampmock: 2025-08-08T17:13:39.021370314+05:30
+    restimestampmock: 2025-08-08T17:13:39.021562814+05:30
 ---
 version: api.keploy.io/v1beta1
 kind: MySQL
@@ -208,7 +208,7 @@ spec:
     requests:
         - header:
             header:
-                payload_length: 169
+                payload_length: 175
                 sequence_id: 0
             packet_type: COM_QUERY
           message:
@@ -217,13 +217,12 @@ spec:
             null_bitmap: []
             new_params_bind_flag: 0
             parameters: []
-            query: |-
-                CREATE TABLE IF NOT EXISTS payloads (
-                    id          BIGINT PRIMARY KEY AUTO_INCREMENT,
-                    request_id  VARCHAR(64),
-                    query_num   INT,
-                    data        LONGTEXT
-                )
+            query: |4-
+                    CREATE TABLE IF NOT EXISTS clients (
+                        id BIGINT PRIMARY KEY AUTO_INCREMENT,
+                        display_name VARCHAR(255) NOT NULL,
+                        client_status VARCHAR(50)
+                    );
     responses:
         - header:
             header:
@@ -237,9 +236,9 @@ spec:
             status_flags: 0
             warnings: 1
             info: ""
-    created: 1754578755
-    reqtimestampmock: 2025-08-07T14:59:15.420159419Z
-    restimestampmock: 2025-08-07T14:59:15.42837479Z
+    created: 1754653419
+    reqtimestampmock: 2025-08-08T17:13:39.021600106+05:30
+    restimestampmock: 2025-08-08T17:13:39.023581399+05:30
 ---
 version: api.keploy.io/v1beta1
 kind: MySQL
@@ -253,7 +252,7 @@ spec:
     requests:
         - header:
             header:
-                payload_length: 9
+                payload_length: 282
                 sequence_id: 0
             packet_type: COM_QUERY
           message:
@@ -262,249 +261,14 @@ spec:
             null_bitmap: []
             new_params_bind_flag: 0
             parameters: []
-            query: commit
-    responses:
-        - header:
-            header:
-                payload_length: 7
-                sequence_id: 1
-            packet_type: OK
-          message:
-            header: 0
-            affected_rows: 0
-            last_insert_id: 0
-            status_flags: 0
-            warnings: 0
-            info: ""
-    created: 1754578755
-    reqtimestampmock: 2025-08-07T14:59:15.4285161Z
-    restimestampmock: 2025-08-07T14:59:15.429370757Z
----
-version: api.keploy.io/v1beta1
-kind: MySQL
-name: mock-6
-spec:
-    metadata:
-        connID: "2"
-        requestOperation: HandshakeV10
-        responseOperation: OK
-        type: config
-    requests:
-        - header:
-            header:
-                payload_length: 32
-                sequence_id: 1
-            packet_type: SSLRequest
-          message:
-            capability_flags: 431991437
-            max_packet_size: 1073741824
-            character_set: 255
-            filler: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
-        - header:
-            header:
-                payload_length: 297
-                sequence_id: 2
-            packet_type: HandshakeResponse41
-          message:
-            capability_flags: 431991437
-            max_packet_size: 1073741824
-            character_set: 255
-            filler: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
-            username: demo
-            auth_response: [161, 95, 89, 119, 45, 149, 231, 28, 207, 237, 0, 112, 249, 162, 124, 77, 187, 152, 126, 200, 208, 252, 225, 39, 26, 69, 95, 228, 133, 175, 130, 137]
-            database: demo
-            auth_plugin_name: caching_sha2_password
-            connection_attributes:
-                _client_name: libmysql
-                _client_version: 9.1.0
-                _connector_license: GPL-2.0
-                _connector_name: mysql-connector-python
-                _connector_version: 9.1.0
-                _os: Linux
-                _pid: "3927917"
-                _platform: x86_64
-                _source_host: ubuntu2404
-            zstdcompressionlevel: 0
-    responses:
-        - header:
-            header:
-                payload_length: 73
-                sequence_id: 0
-            packet_type: HandshakeV10
-          message:
-            protocol_version: 10
-            server_version: 8.3.0
-            connection_id: 19
-            auth_plugin_data: [39, 8, 13, 46, 64, 12, 114, 118, 119, 61, 55, 35, 31, 55, 38, 58, 91, 52, 26, 12, 0]
-            filler: 0
-            capability_flags: 3758096383
-            character_set: 255
-            status_flags: 2
-            auth_plugin_name: caching_sha2_password
-        - header:
-            header:
-                payload_length: 2
-                sequence_id: 3
-            packet_type: AuthMoreData
-          message:
-            status_tag: 1
-            data: FastAuthSuccess
-        - header:
-            header:
-                payload_length: 16
-                sequence_id: 4
-            packet_type: OK
-          message:
-            header: 0
-            affected_rows: 0
-            last_insert_id: 0
-            status_flags: 16386
-            warnings: 0
-            info: "\0\a\x01\x05\x04demo"
-    created: 1754578755
-    reqtimestampmock: 2025-08-07T14:59:15.6144749Z
-    restimestampmock: 2025-08-07T14:59:15.632004001Z
----
-version: api.keploy.io/v1beta1
-kind: MySQL
-name: mock-7
-spec:
-    metadata:
-        connID: "2"
-        requestOperation: COM_QUERY
-        responseOperation: OK
-        type: mocks
-    requests:
-        - header:
-            header:
-                payload_length: 51
-                sequence_id: 0
-            packet_type: COM_QUERY
-          message:
-            command: 3
-            parameter_count: 0
-            null_bitmap: []
-            new_params_bind_flag: 0
-            parameters: []
-            query: SET NAMES 'utf8mb4' COLLATE 'utf8mb4_0900_ai_ci'
-    responses:
-        - header:
-            header:
-                payload_length: 107
-                sequence_id: 1
-            packet_type: OK
-          message:
-            header: 0
-            affected_rows: 0
-            last_insert_id: 0
-            status_flags: 16386
-            warnings: 0
-            info: "\0b\0\x1D\x14character_set_client\autf8mb4\0!\x18character_set_connection\autf8mb4\0\x1E\x15character_set_results\autf8mb4"
-    created: 1754578755
-    reqtimestampmock: 2025-08-07T14:59:15.632774017Z
-    restimestampmock: 2025-08-07T14:59:15.63321586Z
----
-version: api.keploy.io/v1beta1
-kind: MySQL
-name: mock-8
-spec:
-    metadata:
-        connID: "2"
-        requestOperation: COM_QUERY
-        responseOperation: OK
-        type: mocks
-    requests:
-        - header:
-            header:
-                payload_length: 19
-                sequence_id: 0
-            packet_type: COM_QUERY
-          message:
-            command: 3
-            parameter_count: 0
-            null_bitmap: []
-            new_params_bind_flag: 0
-            parameters: []
-            query: set autocommit=0
-    responses:
-        - header:
-            header:
-                payload_length: 26
-                sequence_id: 1
-            packet_type: OK
-          message:
-            header: 0
-            affected_rows: 0
-            last_insert_id: 0
-            status_flags: 16384
-            warnings: 0
-            info: "\0\x11\0\x0F\nautocommit\x03OFF"
-    created: 1754578755
-    reqtimestampmock: 2025-08-07T14:59:15.633456772Z
-    restimestampmock: 2025-08-07T14:59:15.633692144Z
----
-version: api.keploy.io/v1beta1
-kind: MySQL
-name: mock-9
-spec:
-    metadata:
-        connID: "2"
-        requestOperation: COM_PING
-        responseOperation: OK
-        type: mocks
-    requests:
-        - header:
-            header:
-                payload_length: 1
-                sequence_id: 0
-            packet_type: COM_PING
-          message:
-            command: 14
-    responses:
-        - header:
-            header:
-                payload_length: 7
-                sequence_id: 1
-            packet_type: OK
-          message:
-            header: 0
-            affected_rows: 0
-            last_insert_id: 0
-            status_flags: 0
-            warnings: 0
-            info: ""
-    created: 1754578755
-    reqtimestampmock: 2025-08-07T14:59:15.633904095Z
-    restimestampmock: 2025-08-07T14:59:15.633997395Z
----
-version: api.keploy.io/v1beta1
-kind: MySQL
-name: mock-10
-spec:
-    metadata:
-        connID: "2"
-        requestOperation: COM_QUERY
-        responseOperation: OK
-        type: mocks
-    requests:
-        - header:
-            header:
-                payload_length: 169
-                sequence_id: 0
-            packet_type: COM_QUERY
-          message:
-            command: 3
-            parameter_count: 0
-            null_bitmap: []
-            new_params_bind_flag: 0
-            parameters: []
-            query: |-
-                CREATE TABLE IF NOT EXISTS payloads (
-                    id          BIGINT PRIMARY KEY AUTO_INCREMENT,
-                    request_id  VARCHAR(64),
-                    query_num   INT,
-                    data        LONGTEXT
-                )
+            query: |4-
+                    CREATE TABLE IF NOT EXISTS accounts (
+                        id BIGINT PRIMARY KEY AUTO_INCREMENT,
+                        client_id BIGINT,
+                        account_no_dataphile VARCHAR(100) NULL,
+                        market_value DECIMAL(20, 2),
+                        FOREIGN KEY (client_id) REFERENCES clients(id) ON DELETE CASCADE
+                    );
     responses:
         - header:
             header:
@@ -518,23 +282,23 @@ spec:
             status_flags: 0
             warnings: 1
             info: ""
-    created: 1754578755
-    reqtimestampmock: 2025-08-07T14:59:15.634385359Z
-    restimestampmock: 2025-08-07T14:59:15.642274708Z
+    created: 1754653419
+    reqtimestampmock: 2025-08-08T17:13:39.023668191+05:30
+    restimestampmock: 2025-08-08T17:13:39.024321483+05:30
 ---
 version: api.keploy.io/v1beta1
 kind: MySQL
-name: mock-11
+name: mock-6
 spec:
     metadata:
-        connID: "2"
+        connID: "0"
         requestOperation: COM_QUERY
         responseOperation: OK
         type: mocks
     requests:
         - header:
             header:
-                payload_length: 9
+                payload_length: 194
                 sequence_id: 0
             packet_type: COM_QUERY
           message:
@@ -543,7 +307,13 @@ spec:
             null_bitmap: []
             new_params_bind_flag: 0
             parameters: []
-            query: commit
+            query: |4-
+                    CREATE TABLE IF NOT EXISTS permissions (
+                        id BIGINT PRIMARY KEY AUTO_INCREMENT,
+                        role_name VARCHAR(100),
+                        resource_name VARCHAR(100),
+                        can_read BOOLEAN
+                    );
     responses:
         - header:
             header:
@@ -555,25 +325,25 @@ spec:
             affected_rows: 0
             last_insert_id: 0
             status_flags: 0
-            warnings: 0
+            warnings: 1
             info: ""
-    created: 1754578755
-    reqtimestampmock: 2025-08-07T14:59:15.642493179Z
-    restimestampmock: 2025-08-07T14:59:15.643084383Z
+    created: 1754653419
+    reqtimestampmock: 2025-08-08T17:13:39.024514525+05:30
+    restimestampmock: 2025-08-08T17:13:39.024946192+05:30
 ---
 version: api.keploy.io/v1beta1
 kind: MySQL
-name: mock-12
+name: mock-7
 spec:
     metadata:
-        connID: "2"
+        connID: "0"
         requestOperation: COM_QUERY
         responseOperation: OK
         type: mocks
     requests:
         - header:
             header:
-                payload_length: 123
+                payload_length: 120
                 sequence_id: 0
             packet_type: COM_QUERY
           message:
@@ -582,46 +352,11 @@ spec:
             null_bitmap: []
             new_params_bind_flag: 0
             parameters: []
-            query: 'INSERT INTO payloads (data) VALUES (''\0Timestamp: 2025-08-07T15:09:03.193528, Client: 127.0.0.1, Message: Another Item'')'
-    responses:
-        - header:
-            header:
-                payload_length: 7
-                sequence_id: 1
-            packet_type: OK
-          message:
-            header: 0
-            affected_rows: 1
-            last_insert_id: 1
-            status_flags: 1
-            warnings: 0
-            info: ""
-    created: 1754579343
-    reqtimestampmock: 2025-08-07T15:09:03.19399536Z
-    restimestampmock: 2025-08-07T15:09:03.197655771Z
----
-version: api.keploy.io/v1beta1
-kind: MySQL
-name: mock-13
-spec:
-    metadata:
-        connID: "2"
-        requestOperation: COM_QUERY
-        responseOperation: OK
-        type: mocks
-    requests:
-        - header:
-            header:
-                payload_length: 9
-                sequence_id: 0
-            packet_type: COM_QUERY
-          message:
-            command: 3
-            parameter_count: 0
-            null_bitmap: []
-            new_params_bind_flag: 0
-            parameters: []
-            query: commit
+            query: |4-
+                    CREATE TABLE IF NOT EXISTS payloads (
+                        id BIGINT PRIMARY KEY AUTO_INCREMENT,
+                        data LONGTEXT
+                    );
     responses:
         - header:
             header:
@@ -633,25 +368,25 @@ spec:
             affected_rows: 0
             last_insert_id: 0
             status_flags: 0
-            warnings: 0
+            warnings: 1
             info: ""
-    created: 1754579343
-    reqtimestampmock: 2025-08-07T15:09:03.198027972Z
-    restimestampmock: 2025-08-07T15:09:03.206878538Z
+    created: 1754653419
+    reqtimestampmock: 2025-08-08T17:13:39.025070025+05:30
+    restimestampmock: 2025-08-08T17:13:39.025599734+05:30
 ---
 version: api.keploy.io/v1beta1
 kind: MySQL
-name: mock-14
+name: mock-8
 spec:
     metadata:
-        connID: "2"
+        connID: "0"
         requestOperation: COM_QUERY
-        responseOperation: OK
+        responseOperation: ERR
         type: mocks
     requests:
         - header:
             header:
-                payload_length: 123
+                payload_length: 46
                 sequence_id: 0
             packet_type: COM_QUERY
           message:
@@ -660,59 +395,19 @@ spec:
             null_bitmap: []
             new_params_bind_flag: 0
             parameters: []
-            query: 'INSERT INTO payloads (data) VALUES (''\0Timestamp: 2025-08-07T15:09:05.753309, Client: 127.0.0.1, Message: Another Item'')'
+            query: "\n    TRUNCATE \n        TABLE accounts;\n    "
     responses:
         - header:
             header:
-                payload_length: 7
+                payload_length: 129
                 sequence_id: 1
-            packet_type: OK
+            packet_type: ERR
           message:
-            header: 0
-            affected_rows: 1
-            last_insert_id: 2
-            status_flags: 1
-            warnings: 0
-            info: ""
-    created: 1754579345
-    reqtimestampmock: 2025-08-07T15:09:05.753499554Z
-    restimestampmock: 2025-08-07T15:09:05.753991437Z
----
-version: api.keploy.io/v1beta1
-kind: MySQL
-name: mock-15
-spec:
-    metadata:
-        connID: "2"
-        requestOperation: COM_QUERY
-        responseOperation: OK
-        type: mocks
-    requests:
-        - header:
-            header:
-                payload_length: 9
-                sequence_id: 0
-            packet_type: COM_QUERY
-          message:
-            command: 3
-            parameter_count: 0
-            null_bitmap: []
-            new_params_bind_flag: 0
-            parameters: []
-            query: commit
-    responses:
-        - header:
-            header:
-                payload_length: 7
-                sequence_id: 1
-            packet_type: OK
-          message:
-            header: 0
-            affected_rows: 0
-            last_insert_id: 0
-            status_flags: 0
-            warnings: 0
-            info: ""
-    created: 1754579345
-    reqtimestampmock: 2025-08-07T15:09:05.754060207Z
-    restimestampmock: 2025-08-07T15:09:05.764913975Z
+            header: 255
+            error_code: 1701
+            sql_state_marker: '#'
+            sql_state: "42000"
+            error_message: Cannot truncate a table referenced in a foreign key constraint (`demo`.`transactions`, CONSTRAINT `transactions_ibfk_1`)
+    created: 1754653419
+    reqtimestampmock: 2025-08-08T17:13:39.025680609+05:30
+    restimestampmock: 2025-08-08T17:13:39.026338443+05:30

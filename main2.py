@@ -64,58 +64,6 @@ def setup_database():
     conn = get_db_connection()
     if not conn: sys.exit(1)
     
-    try:
-        print("Setting up tables...")
-        cur = conn.cursor()
-        
-        # Disable FK checks and drop tables
-        cur.execute("SET foreign_key_checks = 0;")
-        cur.execute("DROP TABLE IF EXISTS transactions, api_logs, accounts, token_blacklist_blacklistedtoken, token_blacklist_outstandingtoken, django_migrations, permissions, clients, payloads, programs;")
-        cur.execute("SET foreign_key_checks = 1;")
-        
-        # Rest of your setup code...
-        conn.commit()
-        
-    except mysql.connector.Error as err:
-        print(f"Database setup failed: {err}")
-        conn.rollback()
-        sys.exit(1)
-    finally:
-        if conn.is_connected():
-            cur.close()
-            conn.close()
-    print("Database setup complete.")
-    """Creates/resets and populates the database tables on startup."""
-    print("Connecting to database to run setup...")
-    conn = get_db_connection()
-    if not conn: sys.exit(1)
-    
-    try:
-        print("Setting up tables...")
-        cur = conn.cursor()
-        
-        # Disable FK checks and drop tables
-        cur.execute("SET foreign_key_checks = 0;")
-        cur.execute("DROP TABLE IF EXISTS transactions, api_logs, accounts, token_blacklist_blacklistedtoken, token_blacklist_outstandingtoken, django_migrations, permissions, clients, payloads, programs;")
-        cur.execute("SET foreign_key_checks = 1;")
-        
-        # Rest of your setup code...
-        conn.commit()
-        
-    except mysql.connector.Error as err:
-        print(f"Database setup failed: {err}")
-        conn.rollback()
-        sys.exit(1)
-    finally:
-        if conn.is_connected():
-            cur.close()
-            conn.close()
-    print("Database setup complete.")
-    """Creates/resets and populates the database tables on startup."""
-    print("Connecting to database to run setup...")
-    conn = get_db_connection()
-    if not conn: sys.exit(1)
-    
     print("Setting up tables...")
     cur = conn.cursor()
     
@@ -148,12 +96,6 @@ def setup_database():
     cur.close()
     conn.close()
     print("Database setup complete.")
-
-
-
-
-
-
 
 # --- Health Check ---
 @app.route("/health", methods=["GET"])
@@ -355,5 +297,5 @@ def transfer_funds():
         if conn and conn.is_connected(): conn.close()
 
 if __name__ == "__main__":
-    # setup_database()
+    setup_database()
     app.run(host="0.0.0.0", port=5000)
