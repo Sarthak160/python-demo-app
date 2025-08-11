@@ -43,7 +43,7 @@ curl -s -X GET "$HOST/data" \
 
 print_header "Test 3: Fetching System & Session Variables (DQL)"
 curl -s -X GET "$HOST/system/status" \
-    -H "Authorization: Bearer $ACCESS_TOKEN" | jq .
+    -H "Authorization: Bearer $ACCESS_TOKEN" 
 
 print_header "Test 4: Fetching Django Migrations (DQL with DATETIME)"
 curl -s -X GET "$HOST/system/migrations" \
@@ -51,7 +51,7 @@ curl -s -X GET "$HOST/system/migrations" \
 
 print_header "Test 5: Checking Blacklisted Token with INNER JOIN (DQL)"
 curl -s -X GET "$HOST/auth/check-token/9522d59c56404995af98d4c30bde72b3" \
-    -H "Authorization: Bearer $ACCESS_TOKEN" | jq .
+    -H "Authorization: Bearer $ACCESS_TOKEN" 
 
 print_header "Test 6: Creating an API Log with a large parameter INSERT (DML)"
 curl -s -X POST "$HOST/logs" \
@@ -70,7 +70,7 @@ curl -s -X GET "$HOST/reports/client-summary" \
 
 print_header "Test 9: Setting session variables (SET SESSION)"
 curl -s -X POST "$HOST/system/session-config" \
-    -H "Authorization: Bearer $ACCESS_TOKEN" | jq .
+    -H "Authorization: Bearer $ACCESS_TOKEN" 
 
 print_header "Test 10: Running Full Financial Summary Report (Complex JOIN, CASE, Subquery, Aggregation)"
 curl -s -X GET "$HOST/reports/full-financial-summary" \

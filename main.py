@@ -268,19 +268,7 @@ def generate_client_summary():
     finally:
         if conn and conn.is_connected(): conn.close()
         
-@app.route("/system/session-config", methods=["POST"])
-@jwt_required()
-def set_session_vars():
-    conn = get_db_connection()
-    if not conn: return jsonify({"error": "Database connection failed"}), 500
-    try:
-        cur = conn.cursor(dictionary=True, buffered=True)
-        cur.execute("SET SESSION TRANSACTION ISOLATION LEVEL READ COMMITTED;")
-        cur.execute("SET @my_user_variable = 'test_value';")
-        cur.execute("SELECT @@transaction_isolation as isolation_level, @my_user_variable as user_var;")
-        return jsonify(cur.fetchone())
-    finally:
-        if conn and conn.is_connected(): conn.close()
+
 
 # --- Most Complex Endpoints ---
 @app.route("/reports/full-financial-summary", methods=["GET"])
@@ -355,5 +343,5 @@ def transfer_funds():
         if conn and conn.is_connected(): conn.close()
 
 if __name__ == "__main__":
-    # setup_database()
+    setup_database()
     app.run(host="0.0.0.0", port=5000)
